@@ -11,7 +11,7 @@ vim.opt.wrap = false
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 4
 vim.opt.backup = false
 vim.opt.writebackup = false
@@ -74,6 +74,15 @@ vim.keymap.set('n', '<leader>P', '"+p', opts)
 vim.keymap.set('v', '<leader>P', '"+p', opts)
 vim.keymap.set('n', '<C-V>P', '"+p', opts)
 vim.keymap.set('v', '<C-V>P', '"+p', opts)
+
+-- language specific settings
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = {'gleam'},
+    callback = function()
+        vim.opt_local.tabstop = 2
+        vim.opt_local.shiftwidth = 2
+    end
+})
 
 -- setup colorscheme
 require('colormemory').setup('default', 'dark')
