@@ -26,6 +26,7 @@ require('packer').startup(function(use)
     use {'lifepillar/vim-solarized8', branch = 'neovim'}
     use 'loctvl842/monokai-pro.nvim'
     use 'NLKNguyen/papercolor-theme'
+    use 'kyazdani42/nvim-web-devicons'
 end)
 
 -- configure plugins --
