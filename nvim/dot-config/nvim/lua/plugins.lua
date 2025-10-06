@@ -11,7 +11,7 @@ require('packer').startup(function(use)
     use 'akinsho/bufferline.nvim'
     use 'neovim/nvim-lspconfig'
     use 'lukas-reineke/indent-blankline.nvim'
-    use {'nvim-treesitter/nvim-treesitter'}
+    use 'nvim-treesitter/nvim-treesitter'
 
     -- color schemes --
     use 'morhetz/gruvbox'
