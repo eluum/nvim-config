@@ -74,3 +74,6 @@ vim.keymap.set('n', '<leader>P', '"+p', opts)
 vim.keymap.set('v', '<leader>P', '"+p', opts)
 vim.keymap.set('n', '<C-V>P', '"+p', opts)
 vim.keymap.set('v', '<C-V>P', '"+p', opts)
+
+-- setup colorscheme
+require('colormemory').setup('default', 'dark')
