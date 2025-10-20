@@ -12,6 +12,7 @@ require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'lukas-reineke/indent-blankline.nvim'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'kyazdani42/nvim-web-devicons'
 
     -- color schemes --
     use 'morhetz/gruvbox'
@@ -26,7 +27,9 @@ require('packer').startup(function(use)
     use {'lifepillar/vim-solarized8', branch = 'neovim'}
     use 'loctvl842/monokai-pro.nvim'
     use 'NLKNguyen/papercolor-theme'
-    use 'kyazdani42/nvim-web-devicons'
+    use 'sainnhe/gruvbox-material'
+    use 'jpwol/thorn.nvim'
+    use 'rose-pine/neovim'
 end)
 
 -- configure plugins --

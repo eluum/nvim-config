@@ -1,5 +1,4 @@
 require('plugins')
-require('lsp')
 
 -- search --
 vim.opt.hlsearch = true
@@ -98,3 +97,4 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- setup colorscheme --
 require('colormemory').setup('default', 'dark')
+require('lsp')
