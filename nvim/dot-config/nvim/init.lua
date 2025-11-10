@@ -67,10 +67,12 @@ vim.keymap.set('n', '<s-tab>', 'I<backspace><esc>', opts)
 vim.keymap.set('n', '<leader>=', 'ggVG=\'\'', opts)
 
 -- copy paste
-vim.keymap.set('n', '<leader>p', '"0p', opts)
-vim.keymap.set('v', '<leader>p', '"0p', opts)
-vim.keymap.set('n', '<leader>P', '"+p', opts)
-vim.keymap.set('v', '<leader>P', '"+p', opts)
+vim.keymap.set('n', '<leader>y', '"+y', opts)
+vim.keymap.set('v', '<leader>y', '"+y', opts)
+vim.keymap.set('n', '<leader>p', '"+p', opts)
+vim.keymap.set('v', '<leader>p', '"+p', opts)
+vim.keymap.set('n', '<leader>P', '"0p', opts)
+vim.keymap.set('v', '<leader>P', '"0p', opts)
 vim.keymap.set('n', '<C-V>P', '"+p', opts)
 vim.keymap.set('v', '<C-V>P', '"+p', opts)
 
