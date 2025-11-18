@@ -65,6 +65,8 @@ vim.keymap.set('n', '<leader>\\', ':noh<CR>', opts)
 vim.keymap.set('n', '<tab>', 'I<tab><esc>', opts)
 vim.keymap.set('n', '<s-tab>', 'I<backspace><esc>', opts)
 vim.keymap.set('n', '<leader>=', 'ggVG=\'\'', opts)
+vim.keymap.set('n', 'J', '10j', opts)
+vim.keymap.set('n', 'K', '10k', opts)
 
 -- copy paste
 vim.keymap.set('n', '<leader>y', '"+y', opts)
