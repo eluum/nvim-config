@@ -11,7 +11,7 @@ require('packer').startup(function(use)
     use 'akinsho/bufferline.nvim'
     use 'neovim/nvim-lspconfig'
     use 'lukas-reineke/indent-blankline.nvim'
-    use 'nvim-treesitter/nvim-treesitter'
+    use {'nvim-treesitter/nvim-treesitter', branch = 'main'}
     use 'kyazdani42/nvim-web-devicons'
 
     -- color schemes --
@@ -50,12 +50,13 @@ require('bufferline').setup {
     }
 }
 
-require('nvim-treesitter.configs').setup {
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    },
-    indent = {
-        enable = true
-    }
-}
+-- start treesitter for syntax highlighting and indentation
+local treesitter_start = function()
+    vim.treesitter.start()
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+end
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = {'gleam', 'python', 'lua'},
+    callback = treesitter_start
+})
